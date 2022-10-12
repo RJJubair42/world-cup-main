@@ -4,36 +4,41 @@
 body {
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
-  margin: 0 auto;
+  margin: 0px auto;
   padding: 0;
   width: 95%;
 }
+/* Header Section Starts */
 .container {
   margin: 0 auto;
   background-color: #161616;
   border-radius: 10px;
-  position: relative;
 }
-/* Header Section Starts */
 
 .player-info {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 24px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  column-gap: 100px;
 }
 .head {
+  font-style: normal;
   font-weight: 700;
-  font-size: 50px;
+  font-size: 70px;
+  line-height: 80px;
+  color: #ffffff;
 }
 .greatest {
   margin-left: 30px;
 }
-.player-info,
-.greatest,
-h2,
-p {
+.greatest p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
   color: #ffffff;
   padding: 10px;
+  text-align: justify;
 }
 .btn {
   background-color: #dd0000;
@@ -51,12 +56,11 @@ p {
 }
 .player,
 img {
-  width: 290px;
-  height: 613px;
-  margin-top: 10px;
+  width: 100%;
+  height: 100vh;
 }
 /* Header Section  Ends*/
-/* Upcoming Match Starts */
+/* Upcoming Match Starts  */
 .upcoming-conatainer {
   display: flex;
   justify-content: space-between;
@@ -173,42 +177,26 @@ a:hover {
 /* Footer Section Ends */
 
 /* Media Queries Starts*/
-/* Mobile Devices */
-@media only screen and (max-width: 480px) {
-  .upcoming-conatainer,
-  .conatainer,
-  .contact-us {
-    width: 100%;
+@media only screen and (max-width: 600px) {
+  .player-info {
+    flex-direction: column-reverse;
+    padding: 10px;
   }
-  .player-info,
-  .upcoming-conatainer,
-  .contact-us {
-    display: flex;
+  .upcoming-conatainer {
     flex-direction: column;
-  }
-  .greatest,
-  .player,
-  .players,
-  .blog-banner,
-  .upcoming-matceh,
-  .contact {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .upcoming-blog,
-  .upcoming-btn {
-    background-color: transparent;
-  }
-  .upcoming-blog {
-    color: #000000;
-  }
-  .upcoming-matceh {
-    margin: 0 auto;
-    background-color: transparent;
+    align-items: center;
   }
   .grid {
-    display: flex;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 992px){
+
+  .upcoming-conatainer {
     flex-direction: column;
-    margin: 0 auto;
+    align-items: center;
+  }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
